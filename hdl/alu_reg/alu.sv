@@ -29,17 +29,19 @@ module alu (
 
 //todo: make logical operations have the MSB set to 0.
 
+bit zero = 1'b0;
+
 always @(*)
   begin
     case (Opcode)
       3'b000: ALU_Out = A_In + B_In + Carry_In;
       3'b001: ALU_Out = A_In + ~B_In + Carry_In;
       3'b010: ALU_Out = ~A_In + B_In + ~Carry_In;
-      3'b011: ALU_Out = A_In | B_In;
-      3'b100: ALU_Out = A_In & B_In;
-      3'b101: ALU_Out = ~A_In & B_In;
-      3'b110: ALU_Out = A_In ^ B_In;
-      3'b111: ALU_Out = A_In ~^ B_In;
+      3'b011: ALU_Out[ALU_OUTPUT_WIDTH-1:0] = {zero, (A_In | B_In)};
+      3'b100: ALU_Out[ALU_OUTPUT_WIDTH-1:0] = {zero, (A_In & B_In)};
+      3'b101: ALU_Out[ALU_OUTPUT_WIDTH-1:0] = {zero, (~A_In & B_In)};
+      3'b110: ALU_Out[ALU_OUTPUT_WIDTH-1:0] = {zero, A_In ^ B_In)};
+      3'b111: ALU_Out[ALU_OUTPUT_WIDTH-1:0] = {zero, (A_In ~^ B_In)};
     endcase
   end
 
