@@ -37,7 +37,7 @@ module alu_regfile (
 );
 
   //Internal connection between the ALU and reg file.
-  logic [ALU_INPUT_WIDTH-1:0] Data_Out_1, Data_Out_2;
+  logic [REGFILE_WIDTH-1:0] Data_Out_1, Data_Out_2;
 
   //Instantiate register file and ALU:
   register_file REGFILE_INST(
