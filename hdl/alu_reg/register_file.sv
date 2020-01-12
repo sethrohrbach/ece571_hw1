@@ -7,7 +7,7 @@
 // Description:
 // ------------
 // Implements a parameterized Register File.  The register file
-// is a dual read port, single write port Register file such as 
+// is a dual read port, single write port Register file such as
 // would be used in a RISC CPU
 //
 // Note:  Original code created by Michael Ciletti
@@ -41,4 +41,3 @@ always_ff @(posedge Clock) begin
 end
 
 endmodule
-	

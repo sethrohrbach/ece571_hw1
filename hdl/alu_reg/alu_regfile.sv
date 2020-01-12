@@ -52,10 +52,11 @@ module alu_regfile (
   );
 
   alu ALU_INST(
-  .A_In(Data_Out_1),
-  .B_In(Data_Out_2),
-  .Carry_In(Carry_In),
-  .Opcode(Opcode),
-  .ALU_Out(ALU_Out));
+  Data_Out_1,
+  Data_Out_2,
+  Carry_In,
+  Opcode,
+  ALU_Out
+  );
 
 endmodule
