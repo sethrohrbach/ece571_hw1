@@ -43,12 +43,12 @@ module alu_regfile (
   register_file REGFILE_INST(
   Data_Out_1,
   Data_Out_2,
-  ALU_Out,
+  Write_data,
   Read_Addr_1,
   Read_Addr_2,
   Write_Addr,
   Write_enable,
-  Write_data
+  Clock
   );
 
   alu ALU_INST(

@@ -27,6 +27,8 @@ module alu (
 
 );
 
+//todo: make logical operations have the MSB set to 0.
+
 always @(*)
   begin
     case (Opcode)
