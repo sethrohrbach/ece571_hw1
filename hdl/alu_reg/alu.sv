@@ -27,8 +27,7 @@ module alu (
 
 );
 
-//todo: make logical operations have the MSB set to 0.
-
+//We use this to set the MSB for logical ops to 0.
 bit zero = 1'b0;
 
 always @(*)

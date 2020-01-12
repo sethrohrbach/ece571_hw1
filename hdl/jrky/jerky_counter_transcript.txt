@@ -1,0 +1,143 @@
+quit -sim
+# End time: 23:42:44 on Jan 11,2020, Elapsed time: 0:06:06
+# Errors: 5, Warnings: 0
+# Compile of jerky_counter.sv was successful.
+# Compile of tb_jerky_counter.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.tb_jerky_counter
+# vsim -voptargs="+acc" work.tb_jerky_counter 
+# Start time: 23:44:45 on Jan 11,2020
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb_jerky_counter(fast)
+# Loading work.jerky_counter(fast)
+run -all
+# Simulation begins...
+# t =   5, count =   1
+# t =  10, count =   1
+# t =  15, count =   4
+# t =  20, count =   2
+# 
+# Reset asserted
+# 
+# t =  25, count =   1
+# t =  30, count =   1
+# t =  31, count =   2
+# t =  35, count =   1
+# t =  40, count =   1
+# t =  45, count =   4
+# t =  50, count =   4
+# t =  55, count =   1
+# t =  60, count =   1
+# t =  65, count =   8
+# t =  70, count =   8
+# t =  75, count =   1
+# t =  80, count =   1
+# t =  85, count =  16
+# t =  90, count =  16
+# t =  95, count =   1
+# t = 100, count =   1
+# t = 105, count =  32
+# t = 110, count =  32
+# t = 115, count =   1
+# t = 120, count =   1
+# t = 125, count =  64
+# t = 130, count =  64
+# t = 135, count =   1
+# t = 140, count =   1
+# t = 145, count = 128
+# t = 150, count = 128
+# t = 155, count =   1
+# t = 160, count =   1
+# t = 165, count =   2
+# t = 170, count =   2
+# t = 175, count =   1
+# t = 180, count =   1
+# t = 185, count =   4
+# t = 190, count =   4
+# t = 191, count =   2
+# 
+# Reset asserted
+# 
+# t = 195, count =   1
+# t = 200, count =   1
+# t = 202, count =   2
+# t = 205, count =   1
+# t = 210, count =   1
+# t = 215, count =   4
+# t = 220, count =   4
+# t = 225, count =   1
+# t = 230, count =   1
+# t = 235, count =   8
+# t = 240, count =   8
+# t = 245, count =   1
+# t = 250, count =   1
+# t = 255, count =  16
+# t = 260, count =  16
+# t = 265, count =   1
+# t = 270, count =   1
+# t = 275, count =  32
+# t = 280, count =  32
+# t = 285, count =   1
+# t = 290, count =   1
+# t = 295, count =  64
+# t = 300, count =  64
+# t = 305, count =   1
+# t = 310, count =   1
+# t = 315, count = 128
+# t = 320, count = 128
+# t = 325, count =   1
+# t = 330, count =   1
+# t = 335, count =   2
+# t = 340, count =   2
+# t = 345, count =   1
+# t = 350, count =   1
+# t = 355, count =   4
+# t = 360, count =   4
+# t = 365, count =   1
+# t = 370, count =   1
+# t = 375, count =   8
+# t = 380, count =   8
+# t = 385, count =   1
+# t = 390, count =   1
+# t = 395, count =  16
+# t = 400, count =  16
+# t = 405, count =   1
+# t = 410, count =   1
+# t = 415, count =  32
+# t = 420, count =  32
+# t = 425, count =   1
+# t = 430, count =   1
+# t = 435, count =  64
+# t = 440, count =  64
+# t = 442, count =   2
+# 
+# Reset asserted1
+# 
+# t = 445, count =   1
+# t = 450, count =   1
+# t = 453, count =   2
+# t = 455, count =   1
+# t = 460, count =   1
+# t = 465, count =   4
+# t = 470, count =   4
+# t = 475, count =   1
+# t = 480, count =   1
+# t = 485, count =   8
+# t = 490, count =   8
+# t = 495, count =   1
+# t = 500, count =   1
+# t = 505, count =  16
+# t = 510, count =  16
+# t = 515, count =   1
+# t = 520, count =   1
+# t = 525, count =  32
+# t = 530, count =  32
+# t = 535, count =   1
+# t = 540, count =   1
+# t = 545, count =  64
+# t = 550, count =  64
+# Simulation ends!
+# ** Note: $stop    : /u/rseth/ece571_jrky_cnt/tb_jerky_counter.sv(61)
+#    Time: 553 ns  Iteration: 0  Instance: /tb_jerky_counter
+# Break in Module tb_jerky_counter at /u/rseth/ece571_jrky_cnt/tb_jerky_counter.sv line 61

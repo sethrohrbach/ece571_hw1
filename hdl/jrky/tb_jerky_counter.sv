@@ -45,10 +45,20 @@ $display("Simulation begins...");
 
 //Just threw in some resets so we can see that it does in fact reset.
 #20 rst = 1;
-#25 rst = 0;
+#1 $display("\nReset asserted\n");
+#10 rst = 0;
 
-#80 rst = 1;
-#90 rst = 0;
+#160 rst = 1;
+#1 $display("\nReset asserted\n");
+#10 rst = 0;
+
+#240 rst = 1;
+#1 $display("\nReset asserted1\n");
+#10 rst = 0;
+
+#100
+$display("Simulation ends!");
+$stop;
 
 end
 endmodule
