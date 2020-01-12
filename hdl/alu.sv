@@ -27,17 +27,17 @@ module alu (
 
 );
 
-always_comb @(*)
+always @(*)
   begin
-    unique case (Opcode)
-      ADD_OP:   ALU_Out = A_in + B_in + Carry_in;
-      SUB_OP:   ALU_Out = A_in + ~B_in + Carry_in;
-      SUBA_OP:  ALU_Out = ~A_in + B_in + ~Carry_in;
-      ORAB_OP:  ALU_Out = A_in | B_in;
-      ANDAB_OP: ALU_Out = A_in & B_in;
-      NOTAB_OP: ALU_Out = ~A_in & B_in;
-      EXOR_OP:  ALU_Out = A_in ^ B_in;
-      EXNOR_OP: ALU_Out = A_in ~^ B_in;
+    case (Opcode)
+      3'b000: ALU_Out = A_In + B_In + Carry_In;
+      3'b001: ALU_Out = A_In + ~B_In + Carry_In;
+      3'b010: ALU_Out = ~A_In + B_In + ~Carry_In;
+      3'b011: ALU_Out = A_In | B_In;
+      3'b100: ALU_Out = A_In & B_In;
+      3'b101: ALU_Out = ~A_In & B_In;
+      3'b110: ALU_Out = A_In ^ B_In;
+      3'b111: ALU_Out = A_In ~^ B_In;
     endcase
   end
 

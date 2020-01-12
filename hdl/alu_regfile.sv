@@ -36,9 +36,26 @@ module alu_regfile (
   input  logic Clock                                  // system clock
 );
 
-logic [ALU_INPUT_WIDTH-1:0] A_data, B_data;
+  //Internal connection between the ALU and reg file.
+  logic [ALU_INPUT_WIDTH-1:0] Data_Out_1, Data_Out_2;
 
-//Instantiate register file and ALU:
-register_file rf0(A_data, B_data, ALU_Out, Read_Addr_1, Read_Addr_2, Write_Addr, Write_enable, Write_data);
+  //Instantiate register file and ALU:
+  register_file REGFILE_INST(
+  Data_Out_1,
+  Data_Out_2,
+  ALU_Out,
+  Read_Addr_1,
+  Read_Addr_2,
+  Write_Addr,
+  Write_enable,
+  Write_data
+  );
 
-alu alu0(A_data, B_data, Carry_In, Opcode, ALU_Out);
+  alu ALU_INST(
+  .A_In(Data_Out_1),
+  .B_In(Data_Out_2),
+  .Carry_In(Carry_In),
+  .Opcode(Opcode),
+  .ALU_Out(ALU_Out));
+
+endmodule
