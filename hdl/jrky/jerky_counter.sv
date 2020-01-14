@@ -1,7 +1,7 @@
 //////////////////////////////////////////////////////
 // jerky_counter.sv - A counter following a specified pattern for ECE571 HW#1
 //
-// Author: Seth Rohrbach
+// Author: Seth Rohrbach - rseth@pdx.edu
 // Date: January 11th, 2020
 //
 // -------------------

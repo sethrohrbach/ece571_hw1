@@ -1,7 +1,7 @@
 //////////////////////////////////////////////////////
 // alu_mod.sv - The module for the 8 bit ALU for ECE571 HW#1 Problem 1
 //
-// Author: Seth Rohrbach
+// Author: Seth Rohrbach - rseth@pdx.edu
 // Date: January 10th, 2020
 //
 // Description:
@@ -9,11 +9,11 @@
 // 000 : add        : a + b + c_in
 // 001 : subtract   : a + ~b + c_in
 // 010 : subtract_a : ~a + b + ~c_in
-// 011 : or_ab      :
-// 100 : and_ab     :
-// 101 : not_ab     :
-// 110 : exor       :
-// 111 : exnor      :
+// 011 : or_ab      : msb = 0, bitwise logical a OR b
+// 100 : and_ab     : msb = 0, bitwise logical a AND b
+// 101 : not_ab     : msb = 0, bitwise logical NOT a AND b
+// 110 : exor       : msb = 0, bitwise logic a XOR b
+// 111 : exnor      : msb = 0, bitwise logical a XNOR b
 //
 //////////////////////////////////////////////////////////
 

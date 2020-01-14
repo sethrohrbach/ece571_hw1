@@ -1,13 +1,15 @@
 //////////////////////////////////////////////////////
 // alu_regfile.sv - The DUT for the ALU module and provided REGFILE for ECE571 HW#1
 //
-// Author: Seth Rohrbach
+// Author: Seth Rohrbach - rseth@pdx.edu
 // Date: January 10th, 2020
 //
 // Description:
 // Instantiates a regfile module and 8 bit ALU module for ECE 571
 // To be used with the provided test bench.
-//
+// The only other thing needed is to make a variable connecting the register file and the ALU.
+// Naming of the interior variables has to follow the testbenches chosen names because it
+// uses hierarichal referencing on them and using the same names is the easiest solution :).
 //
 //////////////////////////////////////////////////////////
 

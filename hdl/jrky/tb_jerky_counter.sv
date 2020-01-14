@@ -1,7 +1,7 @@
 //////////////////////////////////////////////////////
 // tb_jerky_counter.sv - A testbench for a counter following a specified pattern for ECE571 HW#1
 //
-// Author: Seth Rohrbach
+// Author: Seth Rohrbach - rseth@pdx.edu
 // Date: January 11th, 2020
 //
 // --------------
@@ -35,7 +35,12 @@ always
 begin
   #(CLK_PERIOD / 2) clk = ~clk;
   //Printing out the count so we can see it working.
-  $monitor("t = %3d, count = %d", $time, count_out);
+  //$monitor("t = %3d, count = %d", $time, count_out);
+end
+
+always @(posedge clk)
+begin
+  $strobe("t = %3d, count = %d", $time, count_out);
 end
 
 initial
